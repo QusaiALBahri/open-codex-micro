@@ -1,6 +1,9 @@
 # Open Codex Micro
 
-### Your coding workflow, within reach.
+### Open hardware. Tactile control. Your coding workflow, within reach.
+
+Build your own USB macro pad for coding agents: 13 keys, joystick, encoder,
+RGB status, and CircuitPython firmware for Raspberry Pi Pico / RP2040.
 
 <p align="center">
   <img src="docs/assets/open-codex-micro.svg" alt="Illustrated Open Codex Micro macro pad with keys, encoder, joystick, and status light" width="900">
