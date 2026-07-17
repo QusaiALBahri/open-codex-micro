@@ -20,6 +20,8 @@
 [![Firmware: CircuitPython](https://img.shields.io/badge/Firmware-CircuitPython-059669.svg)](firmware/circuitpython/README.md)
 [![Status: prototype](https://img.shields.io/badge/Status-prototype-f59e0b.svg)](docs/BUILD-CHECKLIST.md)
 
+**Languages:** [English](README.md) · [العربية](README.ar.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md)
+
 Open Codex Micro is a compact, repairable macro pad for agentic coding
 workflows. Give repeated actions a physical place: start a task, pause it,
 approve a change, move between sessions, show a diff, or return focus to the
@@ -63,6 +65,26 @@ industrial design.
 | RP2040 + USB-C power | Through-hole or hand-wired prototype | Shortcuts live in one editable file |
 | 13 direct GPIO buttons | No account or telemetry | Works with terminals, editors, and browsers |
 | One bright status pixel | Common, replaceable parts | Add your own layout profiles |
+
+<details>
+<summary><strong>What happens when you press a control?</strong></summary>
+
+Each button sends a normal USB keyboard shortcut. The encoder sends a previous
+or next action, the joystick sends controlled directional repeats, and the
+optional touch input changes the visual state. Nothing needs an account or a
+network connection. Your shortcut choices live in one readable file:
+[`config.py`](firmware/circuitpython/config.py).
+
+</details>
+
+<details>
+<summary><strong>Safety gate before the first plug-in</strong></summary>
+
+Start with the 13 buttons only. Confirm USB HID works, then add the encoder,
+joystick, touch input, and NeoPixel one at a time. Use 3.3 V-safe analog output,
+keep the joystick centered during boot, and never connect 5 V to an RP2040 GPIO.
+
+</details>
 
 The reference firmware targets a Raspberry Pi Pico or another RP2040 board
 running CircuitPython. The design is deliberately simple enough to adapt to an
