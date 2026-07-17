@@ -1,0 +1,37 @@
+name: Hardware or firmware problem
+description: Report a reproducible issue with a build, input, LED, or shortcut.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please include the board model, CircuitPython version, and wiring changes.
+  - type: input
+    id: board
+    attributes:
+      label: Board
+      placeholder: Raspberry Pi Pico / RP2040 variant
+    validations:
+      required: true
+  - type: input
+    id: circuitpython
+    attributes:
+      label: CircuitPython version
+      placeholder: 9.x.x
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      placeholder: Describe the smallest reproducible problem.
+    validations:
+      required: true
+  - type: textarea
+    id: wiring
+    attributes:
+      label: Wiring or configuration changes
+      placeholder: Include changed pins, keymap entries, or a photo link.
+
+
