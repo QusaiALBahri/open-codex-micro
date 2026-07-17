@@ -57,6 +57,9 @@ last_encoder_switch = True
 last_joystick_switch = True
 last_touch = False
 last_report = time.monotonic()
+last_joystick_action = 0.0
+joystick_center_x = joystick_x.value
+joystick_center_y = joystick_y.value
 
 while True:
     event = keys.events.get()
@@ -84,12 +87,16 @@ while True:
 
     # Joystick movement becomes cursor-like arrows only after leaving the
     # deadzone. This keeps a resting analogue stick quiet.
+    now = time.monotonic()
     x = joystick_x.value
     y = joystick_y.value
-    if abs(x - 32768) > 15000:
-        tap(config.ENCODER_STEP if x > 32768 else config.ENCODER_BACK)
-    if abs(y - 32768) > 15000:
-        tap(config.ENCODER_STEP if y < 32768 else config.ENCODER_BACK)
+    if now - last_joystick_action >= config.JOYSTICK_REPEAT_SECONDS:
+        if abs(x - joystick_center_x) > config.JOYSTICK_DEADZONE:
+            tap(config.JOYSTICK_RIGHT if x > joystick_center_x else config.JOYSTICK_LEFT)
+            last_joystick_action = now
+        elif abs(y - joystick_center_y) > config.JOYSTICK_DEADZONE:
+            tap(config.JOYSTICK_DOWN if y > joystick_center_y else config.JOYSTICK_UP)
+            last_joystick_action = now
     touch_state = touch.value if touch else False
     if touch_state and not last_touch:
         pixels.fill(config.PIXEL_ACTIVE)
