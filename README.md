@@ -1,17 +1,32 @@
 # Open Codex Micro
 
-An open, repairable control surface for agentic coding workflows.
+### Build a small, open control surface for your coding workflow.
 
-Open Codex Micro is a compact macro pad that turns the actions you repeat while
-working with coding agents into physical controls: launch a task, pause it,
-approve a change, move between sessions, or return focus to the terminal. It is
-designed to be built from readily available parts rather than purchased as a
-closed accessory.
+[![License: MIT](https://img.shields.io/badge/License-MIT-7c3aed.svg)](LICENSE)
+[![Hardware: RP2040](https://img.shields.io/badge/Hardware-RP2040-2563eb.svg)](hardware/README.md)
+[![Firmware: CircuitPython](https://img.shields.io/badge/Firmware-CircuitPython-059669.svg)](firmware/circuitpython/README.md)
+[![Status: prototype](https://img.shields.io/badge/Status-prototype-f59e0b.svg)](docs/BUILD-CHECKLIST.md)
+
+Open Codex Micro is a compact, repairable macro pad for agentic coding
+workflows. Give repeated actions a physical place: start a task, pause it,
+approve a change, move between sessions, show a diff, or return focus to the
+terminal.
 
 This is an independent open-source project. It is not made by, endorsed by, or
 affiliated with OpenAI or Work Louder. “Codex” is used here to describe a
 workflow and the project does not reproduce proprietary firmware, software, or
 industrial design.
+
+## Choose your path
+
+| I want to… | Start here |
+| --- | --- |
+| Build one this weekend | [`hardware/README.md`](hardware/README.md) |
+| Flash the reference firmware | [`firmware/circuitpython/README.md`](firmware/circuitpython/README.md) |
+| Change the shortcuts | [`firmware/circuitpython/config.py`](firmware/circuitpython/config.py) |
+| Pick a layout | [`docs/PROFILES.md`](docs/PROFILES.md) |
+| Understand the design | [`docs/design.md`](docs/design.md) |
+| Report a problem | [Open an issue](https://github.com/QusaiALBahri/open-codex-micro/issues/new/choose) |
 
 ## What you build
 
@@ -28,7 +43,7 @@ The reference firmware targets a Raspberry Pi Pico or another RP2040 board
 running CircuitPython. The design is deliberately simple enough to adapt to an
 Arduino-compatible board, a Pi Zero running Linux, or a custom PCB.
 
-## Quick start
+## Quick start: six steps
 
 1. Gather the parts listed in [`hardware/README.md`](hardware/README.md).
 2. Install CircuitPython on a Raspberry Pi Pico and copy the libraries in the
@@ -41,9 +56,23 @@ Arduino-compatible board, a Pi Zero running Linux, or a custom PCB.
 6. Plug the board into USB. It appears as a normal keyboard and works with your
    terminal, editor, browser, or Codex client.
 
-The default layout intentionally uses familiar keyboard shortcuts instead of
-depending on a private API. This makes the device useful with any agent
-interface that supports configurable shortcuts.
+The default layout uses ordinary keyboard shortcuts rather than a private API.
+That keeps the pad useful with a terminal, editor, browser, or Codex client.
+The complete first-build checklist is in [`docs/BUILD-CHECKLIST.md`](docs/BUILD-CHECKLIST.md).
+
+## A useful first layout
+
+The reference profile gives each key a job without pretending that every
+software client has the same commands:
+
+```text
+[ new task ] [ send ] [ pause ] [ approve ] [ reject ]
+[ retry    ] [ stop ] [ next ] [ previous ] [ show diff ]
+[ terminal ] [ focus ] [ help ]   ◉ encoder   ◎ joystick
+```
+
+Treat these as labels, not fixed product behavior. Map them to shortcuts that
+already exist in your own tools.
 
 ## Repository map
 
@@ -54,6 +83,7 @@ interface that supports configurable shortcuts.
 | `host/` | Optional serial companion utilities |
 | `docs/` | Design decisions and extension points |
 | `examples/` | Starter profiles for different workflows |
+| `.github/` | Issue forms that make bug reports easier to reproduce |
 
 ## Responsible project notes
 
@@ -67,6 +97,14 @@ The aim is practical openness: readable code, ordinary components, no account,
 no telemetry, and no claim that a DIY build is an exact copy of a commercial
 device. Build one, improve it, and share your layout.
 
+## Current limits
+
+This is a reference prototype, not a finished consumer product. The firmware
+has been syntax-checked but needs physical testing on the builder's exact board,
+switches, joystick, encoder, and CircuitPython version. The default shortcuts
+are intentionally generic and should be reviewed before mapping any destructive
+action.
+
 ## License
 
 Code and documentation are released under the MIT License. Hardware files are
@@ -78,5 +116,4 @@ released under CERN-OHL-S-2.0 where applicable; see `LICENSE` and
 open-source macro pad, Raspberry Pi Pico macro pad, RP2040 keyboard, CircuitPython
 HID, agent workflow controller, coding assistant keyboard, programmable keypad,
 open Codex Micro alternative, DIY developer tool, Qusai Al Bahri, albahri.org
-
 
