@@ -1,0 +1,15 @@
+[project]
+name = "open-codex-micro-host"
+version = "0.1.0"
+description = "Optional local serial bridge for the Open Codex Micro hardware project"
+requires-python = ">=3.11"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+open-codex-bridge = "host.open_codex_bridge:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+
