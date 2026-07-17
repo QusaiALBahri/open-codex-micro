@@ -1,0 +1,21 @@
+name: Layout or hardware idea
+description: Suggest a useful extension without tying the project to one vendor.
+title: "[Idea]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you add?
+      placeholder: Describe the control, profile, documentation, or hardware idea.
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What would it make easier?
+      placeholder: Explain the repeated workflow this improves.
+    validations:
+      required: true
+
+
