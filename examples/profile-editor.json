@@ -1,0 +1,11 @@
+{
+  "name": "editor-friendly",
+  "description": "A neutral profile for a terminal and editor workflow.",
+  "key_labels": [
+    "new task", "send", "pause", "approve", "reject", "retry", "stop",
+    "next agent", "previous agent", "show diff", "open terminal", "focus chat", "help"
+  ],
+  "notes": "Translate these labels into shortcuts in firmware/circuitpython/config.py."
+}
+
+
