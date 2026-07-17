@@ -1,6 +1,19 @@
 # Open Codex Micro
 
-### Build a small, open control surface for your coding workflow.
+### Your coding workflow, within reach.
+
+<p align="center">
+  <img src="docs/assets/open-codex-micro.svg" alt="Illustrated Open Codex Micro macro pad with keys, encoder, joystick, and status light" width="900">
+</p>
+
+<p align="center"><strong>13 keys · joystick · encoder · touch · USB HID · no cloud</strong></p>
+
+<p align="center">
+  <a href="#quick-start-six-steps">Build it</a> ·
+  <a href="hardware/README.md">See the wiring</a> ·
+  <a href="firmware/circuitpython/code.py">Read the firmware</a> ·
+  <a href="https://github.com/QusaiALBahri/open-codex-micro/issues/new/choose">Share an idea</a>
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c3aed.svg)](LICENSE)
 [![Hardware: RP2040](https://img.shields.io/badge/Hardware-RP2040-2563eb.svg)](hardware/README.md)
@@ -11,6 +24,10 @@ Open Codex Micro is a compact, repairable macro pad for agentic coding
 workflows. Give repeated actions a physical place: start a task, pause it,
 approve a change, move between sessions, show a diff, or return focus to the
 terminal.
+
+It is a weekend-buildable alternative for people who want the feeling of a
+dedicated coding control surface without a closed device, vendor daemon, or
+subscription.
 
 This is an independent open-source project. It is not made by, endorsed by, or
 affiliated with OpenAI or Work Louder. “Codex” is used here to describe a
@@ -38,6 +55,14 @@ industrial design.
 - USB HID output, so it works without a special driver
 - A plain-text configuration that can be edited without recompiling
 - Optional serial events for a desktop companion or your own integration
+
+## At a glance
+
+| Small enough for a corner of your desk | Open enough to repair | Flexible enough to keep |
+| --- | --- | --- |
+| RP2040 + USB-C power | Through-hole or hand-wired prototype | Shortcuts live in one editable file |
+| 13 direct GPIO buttons | No account or telemetry | Works with terminals, editors, and browsers |
+| One bright status pixel | Common, replaceable parts | Add your own layout profiles |
 
 The reference firmware targets a Raspberry Pi Pico or another RP2040 board
 running CircuitPython. The design is deliberately simple enough to adapt to an
@@ -104,6 +129,15 @@ has been syntax-checked but needs physical testing on the builder's exact board,
 switches, joystick, encoder, and CircuitPython version. The default shortcuts
 are intentionally generic and should be reviewed before mapping any destructive
 action.
+
+## Roadmap
+
+- [x] RP2040/CircuitPython reference firmware
+- [x] Hardware pinout and first-build checklist
+- [x] Safer joystick calibration and repeat handling
+- [ ] Printable case and switch plate
+- [ ] Per-key RGB expansion
+- [ ] Community layout gallery
 
 ## License
 
