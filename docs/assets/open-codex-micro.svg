@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">Open Codex Micro</title>
+  <desc id="desc">A dark violet illustrated macro pad with thirteen keys, a joystick, rotary encoder, and green status light.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#120d2b"/>
+      <stop offset="1" stop-color="#28124b"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eeeaff"/>
+      <stop offset="1" stop-color="#aaa4c9"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c7c2e1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#05030d" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="620" rx="34" fill="url(#bg)"/>
+  <circle cx="1210" cy="90" r="180" fill="#7c3aed" opacity=".14"/>
+  <circle cx="160" cy="540" r="240" fill="#14b8a6" opacity=".09"/>
+  <path d="M65 495C330 340 445 560 705 434s434-32 635 55" fill="none" stroke="#a78bfa" stroke-opacity=".15" stroke-width="2"/>
+  <g filter="url(#shadow)" transform="translate(225 100) rotate(-3 500 205)">
+    <rect x="0" y="0" width="950" height="410" rx="42" fill="url(#body)"/>
+    <rect x="24" y="24" width="902" height="362" rx="30" fill="#211b3e"/>
+    <text x="58" y="62" fill="#b8b0d9" font-family="system-ui, sans-serif" font-size="18" letter-spacing="4">OPEN CODEX MICRO</text>
+    <circle cx="858" cy="51" r="8" fill="#35d399"/>
+    <g fill="url(#key)" stroke="#7c70a1" stroke-width="2">
+      <rect x="58" y="88" width="106" height="66" rx="14"/><rect x="178" y="88" width="106" height="66" rx="14"/><rect x="298" y="88" width="106" height="66" rx="14"/><rect x="418" y="88" width="106" height="66" rx="14"/><rect x="538" y="88" width="106" height="66" rx="14"/>
+      <rect x="58" y="170" width="106" height="66" rx="14"/><rect x="178" y="170" width="106" height="66" rx="14"/><rect x="298" y="170" width="106" height="66" rx="14"/><rect x="418" y="170" width="106" height="66" rx="14"/><rect x="538" y="170" width="106" height="66" rx="14"/>
+      <rect x="58" y="252" width="106" height="66" rx="14"/><rect x="178" y="252" width="106" height="66" rx="14"/><rect x="298" y="252" width="106" height="66" rx="14"/>
+    </g>
+    <g fill="#4a416d" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">
+      <text x="111" y="127">NEW</text><text x="231" y="127">SEND</text><text x="351" y="127">PAUSE</text><text x="471" y="127">APPROVE</text><text x="591" y="127">REJECT</text>
+      <text x="111" y="209">RETRY</text><text x="231" y="209">STOP</text><text x="351" y="209">NEXT</text><text x="471" y="209">BACK</text><text x="591" y="209">DIFF</text>
+      <text x="111" y="291">TERM</text><text x="231" y="291">FOCUS</text><text x="351" y="291">HELP</text>
+    </g>
+    <circle cx="778" cy="185" r="76" fill="#17122d" stroke="#6d5ca4" stroke-width="5"/>
+    <circle cx="778" cy="185" r="48" fill="#332657" stroke="#a78bfa" stroke-width="3"/>
+    <circle cx="778" cy="185" r="15" fill="#c4b5fd"/>
+    <path d="M778 112v-18M778 258v18M705 185h-18M851 185h18" stroke="#a78bfa" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="778" cy="302" r="27" fill="#17122d" stroke="#6d5ca4" stroke-width="5"/>
+    <circle cx="778" cy="302" r="12" fill="#35d399"/>
+    <rect x="836" y="271" width="54" height="54" rx="12" fill="#17122d" stroke="#6d5ca4" stroke-width="5"/>
+    <path d="M849 298h28M863 284v28" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="76" y="100" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="700">MAKE THE NEXT MOVE TACTILE</text>
+  <text x="77" y="136" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="18">Open hardware for focused, local coding workflows.</text>
+</svg>
+
